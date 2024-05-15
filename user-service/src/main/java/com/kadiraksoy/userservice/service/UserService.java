@@ -10,6 +10,7 @@ import com.kadiraksoy.userservice.mapper.UserMapper;
 import com.kadiraksoy.userservice.model.User;
 import com.kadiraksoy.userservice.producer.KafkaProducer;
 import com.kadiraksoy.userservice.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class UserService {
 
     private final UserRepository userRepository;
@@ -33,11 +35,10 @@ public class UserService {
         if(userRepository.findByEmail(user.getEmail()).isPresent()){
             throw new EmailAlreadyExisting("Email already existing.");
         }
-
         userRepository.save(user);
+        log.info("User Created ");
 
         kafkaProducer.produceData(userRequest);
-
         return userMapper.userRequestToUserResponse(userRequest);
     }
 
@@ -52,6 +53,7 @@ public class UserService {
         }else {
             throw new UserNotFoundException("User not found with id:" + id);
         }
+        log.info("user updated.");
         return userMapper.userRequestToUserResponse(userRequest);
     }
     public void deleteUser(Long id){
@@ -60,6 +62,7 @@ public class UserService {
             throw new UserNotFoundException("User not found with id:" + id);
         }
         userRepository.deleteById(id);
+        log.info("user deleted");
     }
 
     public List<UserResponse> getAllUsers(){
