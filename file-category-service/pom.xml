@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kadiraksoy</groupId>
-	<artifactId>file-category</artifactId>
+	<artifactId>file-category-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>file-category</name>
 	<description>Demo project for Spring Boot</description>
@@ -50,6 +50,11 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<!--		Validation-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
 	</dependencies>
