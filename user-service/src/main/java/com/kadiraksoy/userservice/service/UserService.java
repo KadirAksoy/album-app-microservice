@@ -46,13 +46,14 @@ public class UserService {
         Optional<User> optionalUser = userRepository.findById(id);
         if(optionalUser.isPresent()){
 
-            optionalUser.get().setEmail(userRequest.getFirstName());
-            optionalUser.get().setEmail(userRequest.getLastName());
+            optionalUser.get().setFirstName(userRequest.getFirstName());
+            optionalUser.get().setLastName(userRequest.getLastName());
             optionalUser.get().setEmail(userRequest.getEmail());
             optionalUser.get().setPassword(userRequest.getPassword());
         }else {
             throw new UserNotFoundException("User not found with id:" + id);
         }
+        userRepository.save(optionalUser.get());
         log.info("user updated.");
         return userMapper.userRequestToUserResponse(userRequest);
     }
