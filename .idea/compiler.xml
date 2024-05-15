@@ -10,6 +10,7 @@
         <module name="user-service" />
         <module name="file-category-service" />
         <module name="mail-service" />
+        <module name="file-service" />
         <module name="service-registry" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="file-category-service" options="-parameters" />
+      <module name="file-service" options="-parameters" />
       <module name="mail-service" options="-parameters" />
       <module name="service-registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
