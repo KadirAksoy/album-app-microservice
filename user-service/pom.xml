@@ -53,11 +53,6 @@
 <!--			<artifactId>mapstruct</artifactId>-->
 <!--			<version>${org.mapstruct.version}</version>-->
 <!--		</dependency>-->
-<!--		Java mail sender-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
 <!--		Kafka-->
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
