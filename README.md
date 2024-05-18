@@ -10,4 +10,3 @@ Not Oluşturma: Kullanıcılar metin notları oluşturup bunları kaydedebilirle
 
 Kategori Yönetimi: Resim, dosya ve notlar, kullanıcı tarafından oluşturulan kategorilere eklenebilir.
 
-Arama ve Filtreleme: Kullanıcılar belirli kategorilerdeki içerikleri kolayca bulabilirler.
