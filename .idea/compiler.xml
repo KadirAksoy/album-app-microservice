@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="note-category-service" />
         <module name="user-service" />
         <module name="file-category-service" />
         <module name="mail-service" />
@@ -20,6 +21,7 @@
       <module name="file-category-service" options="-parameters" />
       <module name="file-service" options="-parameters" />
       <module name="mail-service" options="-parameters" />
+      <module name="note-category-service" options="-parameters" />
       <module name="service-registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
