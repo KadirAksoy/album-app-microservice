@@ -37,11 +37,17 @@ public class EmailService {
         javaMailSender.send(mimeMessage);
         log.info("mail gönderildi.");
 
-//        String email2 =email;
-//        String firstName2 = firstName;
-//        String lastName2 = lastName;
-//
-//        System.out.println(email2 + firstName2 + lastName2);
+    }
+
+    public void sendMailKafka(String email,String firstName, String lastName) throws MessagingException {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
+        mimeMessageHelper.setTo(email);
+        mimeMessageHelper.setSubject("Welcome" + firstName + lastName );
+        mimeMessageHelper.setText("<div> Welcome to Album App</div>", true);
+
+        javaMailSender.send(mimeMessage);
+        log.info("mail gönderildi.");
     }
 
     public EmailResponseDto sendMailAllUsers(String message) {

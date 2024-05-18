@@ -24,7 +24,7 @@ public class KafkaConsumer {
         String firstName = userDto.getFirstName();
         String lastName = userDto.getLastName();
 
-        emailService.sendMail(email,firstName,lastName);
+        emailService.sendMailKafka(email,firstName,lastName);
         log.info("Gönderilen veriler: email:" + email +
                 "firstName:" + firstName +
                 "lastName" + lastName);
