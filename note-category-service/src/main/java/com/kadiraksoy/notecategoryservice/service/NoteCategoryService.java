@@ -4,6 +4,7 @@ package com.kadiraksoy.notecategoryservice.service;
 import com.kadiraksoy.notecategoryservice.dto.NoteCategoryRequest;
 import com.kadiraksoy.notecategoryservice.dto.NoteCategoryResponse;
 import com.kadiraksoy.notecategoryservice.mapper.NoteCategoryMapper;
+import com.kadiraksoy.notecategoryservice.model.NoteCategory;
 import com.kadiraksoy.notecategoryservice.repository.NoteCategoryRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -24,10 +25,10 @@ public class NoteCategoryService {
         this.noteCategoryMapper = noteCategoryMapper;
     }
 
-    public NoteCategoryResponse createNoteCategory(NoteCategoryRequest noteCategoryRequest){
-
-
-    }
+//    public NoteCategoryResponse createNoteCategory(NoteCategoryRequest noteCategoryRequest){
+//        NoteCategory noteCategory =
+//
+//    }
 
 
 }
