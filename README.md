@@ -4,7 +4,7 @@ Bu proje, kullanıcıların resim, dosya veya not oluşturup bunları belirli ka
 # Özellikler
 Resim Yükleme: Kullanıcılar resim dosyalarını yükleyebilir ve kategorilere ekleyebilir.
 
-Dosya Yükleme: Farklı türde dosyalar yüklenebilir ve düzenlenebilir.
+Dosya Yükleme: Farklı türde dosyalar yüklenebilir ve kategorilere ekleyebilir.
 
 Not Oluşturma: Kullanıcılar metin notları oluşturup bunları kaydedebilirler.
 
